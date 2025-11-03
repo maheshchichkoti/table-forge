@@ -10,3 +10,28 @@
 export interface DemoResponse {
   message: string;
 }
+
+export interface UserSummary {
+  id: string;
+  name: string;
+  email: string;
+  gender: string;
+  country: string;
+  age: number;
+  picture: string;
+}
+
+export interface PaginationMeta {
+  page: number;
+  pageSize: number;
+  totalItems: number;
+  totalPages: number;
+}
+
+export interface UsersResponse {
+  data: UserSummary[];
+  pagination: PaginationMeta;
+  availableCountries: string[];
+  availableGenders: string[];
+  lastUpdated: string;
+}
